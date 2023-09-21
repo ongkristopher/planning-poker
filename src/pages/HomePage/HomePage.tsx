@@ -9,8 +9,6 @@ import LandingImage from './../../images/background.jpg';
 import SessionControllerImage from './../../images/Session.jpg';
 import './HomePage.css';
 import { AboutPlanningPokerContent } from '../AboutPage/AboutPage';
-import { Footer } from '../../components/Footer/Footer';
-import { GoogleAd } from '../../components/GoogleAd/GoogleAd';
 
 export const HomePage = () => {
   const isJoin = useRouteMatch('/join');
@@ -39,7 +37,6 @@ export const HomePage = () => {
             <div className='HomePageContainer'>{isJoin ? <JoinGame /> : <CreateGame />}</div>
           </Grid>
         </Grid>
-        <GoogleAd />
         <Grid container item sm={12} lg={9} justify='center' alignItems='center'>
           <Grid item sm={12} lg={6}>
             <Slide in={true} direction='up' timeout={1000}>
@@ -103,12 +100,8 @@ export const HomePage = () => {
             </Slide>
           </Grid>
         </Grid>
-        <GoogleAd />
         <AboutPlanningPokerContent />
-        <GoogleAd />
       </Grid>
-
-      <Footer />
     </>
   );
 };
